@@ -1,2 +1,2 @@
 
-# Individuell Examination: Shui Fullstack - Leonard Jarl
+# Backend for Shui - Leonard Jarl
