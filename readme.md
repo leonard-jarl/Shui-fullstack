@@ -1,1 +1,1 @@
-First commit
+# Individuell Examination: Shui Fullstack - Leonard Jarl
