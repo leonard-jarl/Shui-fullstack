@@ -1,0 +1,18 @@
+.notFoundMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.notfound__heading {
+  text-align: center;
+  color: white;
+  font-family: "Lora", sans-serif;
+}
+
+.notfound__emoji {
+  font-size: 200px;
+}

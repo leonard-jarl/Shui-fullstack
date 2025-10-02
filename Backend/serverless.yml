@@ -1,0 +1,42 @@
+org: ${env:ORG}
+service: shui-api
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: eu-north-1
+  iam:
+    role: ${env:ROLE}
+
+build:
+  esbuild:
+    minify: true
+
+package:
+  individually: true
+
+functions:
+  createMessage:
+    handler: functions/createMessage/index.handler
+    events:
+      - httpApi:
+          path: /messages
+          method: POST
+  getMessages:
+    handler: functions/getMessages/index.handler
+    events:
+      - httpApi:
+          path: /messages
+          method: GET
+  getMessagesByUser:
+    handler: functions/getMessagesByUser/index.handler
+    events:
+      - httpApi:
+          path: /messages/{username}
+          method: GET
+  updateMessage:
+    handler: functions/updateMessage/index.handler
+    events:
+      - httpApi:
+          path: /messages/{id}
+          method: PUT

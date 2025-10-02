@@ -1,0 +1,21 @@
+.messageboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 50px;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.messageboard__error-message {
+  font-size: 2rem;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  color: white;
+  align-self: center;
+  text-align: center;
+  position: absolute;
+  bottom: 50%;
+  padding: 0 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}

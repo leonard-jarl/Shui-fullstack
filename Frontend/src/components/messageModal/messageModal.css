@@ -1,0 +1,158 @@
+.message-modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(25, 39, 74, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-modal {
+  background: #121c36;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 32px 24px 24px 24px;
+  position: relative;
+  min-width: 340px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.message-modal__heading {
+  font-size: 2rem;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.message-modal__message {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background: #ffa;
+  overflow: hidden;
+  margin: 30px auto 1rem auto;
+  padding: 25px;
+  border-radius: 0 0 0 35px/50px;
+  font-family: "Permanent Marker", cursive;
+  line-height: 1.6em;
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+.message-modal__message:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background: #ffa;
+  box-shadow: 3px -2px 10px rgba(0, 0, 0, 0.2),
+    inset 15px -15px 15px rgba(0, 0, 0, 0.3);
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: skewX(25deg);
+}
+
+.message-modal__message:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 20px;
+  border-top: 3px solid var(--color-text);
+  border-radius: 50%;
+  bottom: 0px;
+  left: 10%;
+}
+
+.message-modal__textarea,
+.message-modal__input {
+  width: 250px;
+  font-family: "Permanent Marker", cursive;
+  background: #ffa;
+  border: 2px solid #ffa;
+  border-radius: 5px;
+  color: var(--color-text);
+  outline: none;
+  resize: none;
+}
+
+.message-modal__textarea {
+  font-size: 20px;
+  height: 200px;
+}
+
+.message-modal__input {
+  font-size: 25px;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 30px;
+}
+
+.message-modal__post-button {
+  font-family: 'Lora', sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  background: var(--color-text-highlight);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.message-modal__post-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.message-modal__post-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+
+.message-modal__error {
+  color: #EF4343;
+  font-family: 'Lora', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.message-modal__signature {
+  font-size: 25px;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 30px;
+  font-family: "Permanent Marker", cursive;
+  color: var(--color-text);
+}

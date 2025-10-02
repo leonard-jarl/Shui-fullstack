@@ -1,0 +1,60 @@
+.message {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background: #ffa;
+  overflow: hidden;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 0 0 0 35px/50px;
+  box-shadow: inset 0 -50px 50px rgba(0, 0, 0, 0.2),
+    inset 0 30px 15px rgba(0, 0, 0, 0.2), 0 5px 6px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Permanent Marker", cursive;
+  line-height: 1.6em;
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+.message__timestamp {
+  font-size: 0.8em;
+  color: var(--color-text-transparent);
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+}
+
+.message:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background: #ffa;
+  box-shadow: 3px -2px 10px rgba(0, 0, 0, 0.2),
+    inset 15px -15px 15px rgba(0, 0, 0, 0.3);
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: skewX(25deg);
+}
+
+.message:after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 20px;
+  border-top: 3px solid var(--color-text);
+  border-radius: 50%;
+  bottom: 0px;
+  left: 10%;
+}
+
+.message__signature {
+  font-size: 25px;
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+.message:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 170, 0.89);
+  transition: transform 0.2s;
+}
